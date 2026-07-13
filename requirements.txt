@@ -1,0 +1,9 @@
+gitpython
+chromadb
+sentence-transformers
+numpy
+pandas
+python-dotenv
+rank-bm25
+fastapi
+uvicorn

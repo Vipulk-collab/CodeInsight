@@ -1,0 +1,18 @@
+# Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Cloned GitHub Repositories
+data/repos/
+
+# ChromaDB Storage
+data/chroma/
+
+# Environment Variables
+.env
+
+# VS Code Settings (optional)
+.vscode/
