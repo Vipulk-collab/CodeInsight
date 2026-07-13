@@ -17,11 +17,28 @@ def generate_chunk_id(
         unique_string.encode()
     ).hexdigest()
 
-
 def create_chunk(
     parsed_node,
     file_path
 ):
+
+    docstring = parsed_node.get(
+        "docstring"
+    )
+
+    if docstring:
+
+        code_text = (
+            docstring
+            + "\n\n"
+            + parsed_node["source_code"]
+        )
+
+    else:
+
+        code_text = (
+            parsed_node["source_code"]
+        )
 
     return {
 
@@ -33,7 +50,7 @@ def create_chunk(
         ),
 
         "code_text":
-        parsed_node["source_code"],
+        code_text,
 
         "file_path":
         file_path,
@@ -53,7 +70,6 @@ def create_chunk(
         "end_line":
         parsed_node["end_line"]
     }
-
 
 def create_chunks_from_nodes(
     parsed_nodes,
