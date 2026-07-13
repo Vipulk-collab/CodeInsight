@@ -30,10 +30,15 @@ def get_python_files(repo_path: str):
     py_files = []
 
     excluded_dirs = {
-        ".git",
-        "venv",
-        "__pycache__",
-        "node_modules"
+    ".git",
+    "venv",
+    "__pycache__",
+    "node_modules",
+    "tests",
+    "test",
+    "docs",
+    "examples",
+    "benchmarks"
     }
 
     for file in Path(repo_path).rglob("*.py"):
