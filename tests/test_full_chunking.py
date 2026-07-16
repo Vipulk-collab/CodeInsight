@@ -31,7 +31,8 @@ for file in files:
 
         chunks = create_chunks_from_nodes(
             nodes,
-            str(file)
+            str(file),
+            repo_path
         )
 
         all_chunks.extend(chunks)
